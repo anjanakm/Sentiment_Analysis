@@ -73,9 +73,9 @@ def create_app_ui():
     [
      
      html.H1(children='Sentiments Analysis with Insights', id='Main_title',style={'text-align':'center','fontsize':60}),
-     html.Div(style={'backgroundColor':'#33FF41'},children=[
-            html.H3(children='Review Pie Chart', id='sub_heading1',style={'color':'green','fontSize':30,'text-align':'center'}),
-            dcc.Graph(figure=px.pie(df1,values=[pos,neg],names=['Positive Reviews','Negative Reviews'],hole=.4,opacity=1))
+     html.Div(style={'backgroundColor':'yellow'},children=[
+            html.H3(children='Review Pie Chart', id='sub_heading1',style={'color':'black','fontSize':30,'text-align':'center'}),
+            dcc.Graph(figure=px.pie(df1,values=[pos,neg],names=['Positive Reviews','Negative Reviews'],opacity=1,color_discrete_map=('Red','Green')))
             ], className='piegraph'),
      html.Div(style={'backgroundColor':'yellow'}, children=[
         html.Div([
